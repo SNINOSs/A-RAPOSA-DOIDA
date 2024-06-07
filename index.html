@@ -1,48 +1,61 @@
-<html >
-<head >
-    <title>Juan & Lucas</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha RPG</title>
     <style>
-        #titulo {color: #4B0082;}
+        input[type=number],input[type=text] {
+        border: 2px solid black;
+        height: 16pt;
+        border-radius: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
+        width: 24pt;
+        }
 
-        #bg {text-align: center;}
+        input[type=text] {
+        width: 144pt;
+        }
 
-        .h1:hover {color: #000000 ;
-                   background-color: #8E44AD;
-                   -webkit-transform: scale(1.2);
-                    transform : scale(1.2);
-                    transition: all 0.5s;
-                    cursor: pointer;
-                    }   
+        label, body {
+        font-family: sans-serif;
+        font-size: 14pt;
+        color: black;
+        font-weight: bold;
+        }
 
-        #h {font-family: Comic Sans MS; }
-        #V {color: #FF0000;}
-        #L {color: rgb(255, 69, 0);}
-        #A {color: rgb(255, 255, 0);}
-        #VE {color: rgb(0, 128, 0);}
-        #AZ {color: #00BFFF;}
-        #AZE {color: rgb(75, 0, 130);}
-        #VI {color: rgb(128, 0, 128);}
-        #h {color: #fff;}
-
+        input[disabled] {
+        background-color: lightgray;
+        }
     </style>
 </head>
-<body id="bg">
-    <h1 id="titulo"  class="h1">A raposa e as uvas</h1>
-    <p><INS>Uma raposa passou embaixo de um pé carregado com lindas uvas.</INS> Ficou com muita <SMALL> vontade de comer aquelas uvas</SMALL>. Deu muitos saltos, tentou subir na parreira, mas não conseguiu. Depois de muito tentar foi-se embora, dizendo:</p>
-    <p><b>— Eu nem estou ligando para as uvas. Elas estão verdes, mesmo...</b></p>
-
-    <h1 id= "h"class="h1"><SUP>A breve história</SUP> nos fala <SUB>sobre a cobiça e sobre como algumas pessoas lidam com a frustração</SUB> o sentimento de desapontamento.</h1>
-    <h3 class="h1"><DEL>Uma das mais famosas histórias infantis</DEL>, A raposa e as uvas fala do comportamento de muitas pessoas que, como não conseguem aquilo que querem, <MARK><b>desdenham do que não podem ter</b></MARK>.</h3>
-    <p><i>A raposa ficou encantada com as belas uvas, mas, como não as alçava, mesmo apesar de todo o esforço, precisou arranjar uma desculpa para ela mesma.</i></p>
-    <li id="V">Arroz</li>
-    <li id="L">Uva</li>
-    <li id="A">Fejão</li>
-    <li id="VE">chocolate</li>
-    <li id="AZ">Arroz</li>
-    <li id="AZE">Uva</li>
-    <li id="VI">Fejão</li>
-
+<body>
+    <h2>
+        Ficha de RPG
+    </h2>
+    <p>
+    <label>Nome:</label>
+    <input type=text id="nome" />
+    <label>Nível:</label>
+    <input type=number id="nivel" />
+    </p>
     
-   <div > <IMG SRC="https://cdn.culturagenial.com/imagens/a-raposa-e-as-uvas-0-cke.jpg" height="400" width="4000"> </div>
+    <p>
+    <label>Força:</label>
+    <input type=number id="forca" />
+    <label>Poder de Ataque:</label>
+    <input type=number id="poder" disabled />
+    </p>
+    
+    <p>
+    <label>Agilidade:</label>
+    <input type=number id="agilidade" />
+    <label>Armadura:</label>
+    <input type=number id="armadura" />
+    <label>Defesa:</label>
+    <input type=number id="defesa" disabled />
+        </p>        
 </body>
+<script src="rpg.js"></script>
 </html>
