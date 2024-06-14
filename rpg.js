@@ -1,14 +1,15 @@
 var nome = document.querySelector("#nome")
 var nivel = document.querySelector("#nivel")
 nome.addEventListener("change",lerNome)
-
 function lerNome() {
     if (nivel.value >= 5)
-	    {nome.value += " [VETERANO]"}
+    {   nome.value = `${nome.value}`
+        nome.value = ` ${nome.value} [VETERANO]`}
     if (nivel.value < 5)
-	    {nome.value += " [INICIANTE]"}
+	    {   nome.value = `${nome.value}`
+            nome.value = ` ${nome.value}[INICIANTE]`}
+    }
 
-}
 
 var poder_attack = document.querySelector("#poder")
 var forca = document.querySelector("#forca")
@@ -17,6 +18,12 @@ forca.addEventListener("change",lerPoder_attack)
 nivel.addEventListener("change",lerPoder_attack)
 
 function lerPoder_attack() {
+    if (nivel.value >= 5)
+    {   nome.value = `${nome.value}`
+        nome.value = ` ${nome.value} [VETERANO]`}
+    if (nivel.value < 5)
+	    {   nome.value = `${nome.value}`
+            nome.value = ` ${nome.value}[INICIANTE]`}
 	poder_attack.value = ((forca.value - 10)/2) + nivel.value/2
 }
 
