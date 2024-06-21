@@ -15,9 +15,9 @@
         }
 
         input[type=text] {
-        width: 144pt;
+        width: 24pt;
         }
-
+        .resposta[type=number]{ width: 30pt;}
         label, body {
         font-family: sans-serif;
         font-size: 14pt;
@@ -28,34 +28,67 @@
         input[disabled] {
         background-color: lightgray;
         }
+        #body{text-align: center;}
     </style>
 </head>
-<body>
+<body id="body">
     <h2>
         Ficha de RPG
     </h2>
     <p>
+    <li>
     <label>Nome:</label>
     <input type=text id="nome" />
+    </li>
+    <li>
     <label>Nível:</label>
     <input type=number id="nivel" />
-    </p>
-    
-    <p>
+    </li>
+    <li>
     <label>Força:</label>
     <input type=number id="forca" />
+    </li>
+    <li>
     <label>Poder de Ataque:</label>
     <input type=number id="poder" disabled />
-    </p>
-    
-    <p>
+    </li>
+    <li>
     <label>Agilidade:</label>
     <input type=number id="agilidade" />
+    </li>
+    <li>
     <label>Armadura:</label>
     <input type=number id="armadura" />
+    </li>   
+    <li>
     <label>Defesa:</label>
     <input type=number id="defesa" disabled />
-        </p>        
+    </li>
+        </p>  
+    <li>   
+        <button id="d4">DADO[d4]</button> <input type=number class="resposta" id="dado4" disabled /></button>
+    </li>   
+    <li>   
+        <button id="d6">DADO[d6]</button><input type=number class="resposta" id="dado6" disabled /></button>
+    </li>  
+    <li>   
+        <button id="d8">DADO[d8]</button><input type=number class="resposta" id="dado8" disabled /></button>
+    </li>  
+    <li>   
+        <button id="d10">DADO[d10]</button><input type=number class="resposta" id="dado10" disabled /></button>
+    </li>  
+    <li>   
+        <button id="d12">DADO[d12]</button><input type=number class="resposta" id="dado12" disabled /></button>
+    </li>  
+    <li>   
+        <button id="d20">DADO[d20]</button><input type=number class="resposta" id="dado20" disabled /></button>
+    </li>  
+    <li>   
+        <button id="d100">DADO[d100]</button><input type=number class="resposta" id="dado100" disabled /></button>
+    </li>  
+    <li>   
+        <button id="d1000">DADO[d1000]</button><input type=number class="resposta" id="dado1000" disabled /></button>
+    </li>  
 </body>
 <script src="rpg.js"></script>
 </html>
